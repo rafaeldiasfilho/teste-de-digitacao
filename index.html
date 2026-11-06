@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Digitação</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="keyboard-logo">
+                    <div class="key-row">
+                        <div class="key">Q</div>
+                        <div class="key">W</div>
+                        <div class="key">E</div>
+                        <div class="key">R</div>
+                        <div class="key">T</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key">A</div>
+                        <div class="key">S</div>
+                        <div class="key">D</div>
+                        <div class="key">F</div>
+                        <div class="key">G</div>
+                    </div>
+                    <div class="key-row">
+                        <div class="key">Z</div>
+                        <div class="key">X</div>
+                        <div class="key">C</div>
+                        <div class="key">V</div>
+                        <div class="key">B</div>
+                    </div>
+                </div>
+                <span class="logo-text">D.gitação<span class="logo-highlight">QZ</span></span>
+            </div>
+        </div>
+        
+        <p class="slogan">MELHORE SUA DIGITAÇÃO E SEU BOLSO</p>
+        
+        <div class="header-right">
+            <div class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle" class="theme-label">
+                    <span class="theme-icon">🌙</span>
+                    <span class="theme-icon">☀️</span>
+                </label>
+            </div>
+            <button class="support-btn">Suporte</button>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <span class="divider">/</span>
+                <button class="register-btn">Registrar-se</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seletor de idiomas movido para cá -->
+    <div class="language-selector">
+        <div class="dropdown">
+            <button class="dropbtn">Português</button>
+            <div class="dropdown-content">
+                <a href="#" data-lang="portuguese">Português</a>
+                <a href="#" data-lang="english">English</a>
+                <a href="#" data-lang="spanish">Español</a>
+            </div>
+        </div>
+        <div class="dropdown modes-dropdown">
+            <button class="dropbtn">Modos</button>
+            <div class="dropdown-content">
+                <a href="#" data-mode="easy">
+                    <h4>Fácil</h4>
+                    <p>Tempo: 1 minuto</p>
+                    <p>Palavras: 200 diferentes</p>
+                </a>
+                <a href="#" data-mode="medium">
+                    <h4>Médio</h4>
+                    <p>Tempo: 45 segundos</p>
+                    <p>Palavras: 500 diferentes</p>
+                </a>
+                <a href="#" data-mode="hard">
+                    <h4>Difícil</h4>
+                    <p>Tempo: 30 segundos</p>
+                    <p>Palavras: 1200 diferentes</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="game-section">
+            <div class="game-container">
+                <div class="game-header">
+                    <div class="input-row">
+                        <textarea id="inputArea" placeholder="Comece a digitar aqui..."></textarea>
+                        <div class="input-controls">
+                            <div id="timer">1:00</div>
+                            <button id="resetButton" class="reset-button">Reiniciar</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="textToType" class="text-display"></div>
+                <div id="result" class="result"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Área lateral direita com ranking e estatísticas -->
+    <div class="side-panel">
+        <div class="ranking-container">
+            <h3>Top Digitadores</h3>
+            <div class="ranking-list">
+                <div class="ranking-item">
+                    <span class="rank">1</span>
+                    <div class="user-info">
+                        <span class="user">João S.</span>
+                        <span class="tests-count">124 testes</span>
+                    </div>
+                    <span class="score">98 WPM</span>
+                </div>
+                <div class="ranking-item">
+                    <span class="rank">2</span>
+                    <div class="user-info">
+                        <span class="user">Maria L.</span>
+                        <span class="tests-count">98 testes</span>
+                    </div>
+                    <span class="score">95 WPM</span>
+                </div>
+                <div class="ranking-item">
+                    <span class="rank">3</span>
+                    <div class="user-info">
+                        <span class="user">Pedro M.</span>
+                        <span class="tests-count">87 testes</span>
+                    </div>
+                    <span class="score">92 WPM</span>
+                </div>
+                <div class="ranking-item">
+                    <span class="rank">4</span>
+                    <div class="user-info">
+                        <span class="user">Ana C.</span>
+                        <span class="tests-count">76 testes</span>
+                    </div>
+                    <span class="score">89 WPM</span>
+                </div>
+                <div class="ranking-item">
+                    <span class="rank">5</span>
+                    <div class="user-info">
+                        <span class="user">Lucas R.</span>
+                        <span class="tests-count">65 testes</span>
+                    </div>
+                    <span class="score">87 WPM</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-container">
+            <h3>Estatísticas Globais</h3>
+            <div class="stat-box">
+                <div class="stat-item">
+                    <span class="stat-label">Total de Testes</span>
+                    <span class="stat-value">1,234</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Média WPM</span>
+                    <span class="stat-value">45</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="modes-list">
+            <h3>Modos de Jogo</h3>
+            <ul>
+                <li>
+                    <h4>Fácil</h4>
+                    <p>Tempo: 1 minuto</p>
+                    <p>Palavras: 200 diferentes</p>
+                </li>
+                <li>
+                    <h4>Médio</h4>
+                    <p>Tempo: 45 segundos</p>
+                    <p>Palavras: 500 diferentes</p>
+                </li>
+                <li>
+                    <h4>Difícil</h4>
+                    <p>Tempo: 30 segundos</p>
+                    <p>Palavras: 1200 diferentes</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <div class="settings-gear">
+        <i class="fas fa-cog"></i>
+    </div>
+
+    <div class="settings-menu">
+        <!-- Os seletores serão movidos para cá via JavaScript -->
+    </div>
+</body>
+</html>
