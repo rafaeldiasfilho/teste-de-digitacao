@@ -1,5 +1,7 @@
 # Teste de Digitação
 
+**[Ver online](https://rafaeldiasfilho.github.io/teste-de-digitacao/)**
+
 Site para medir a velocidade de digitação, no estilo do 10FastFingers. O texto é gerado com palavras aleatórias, e no fim do tempo o site mostra as palavras por minuto (WPM), os acertos, os erros e a precisão.
 
 ## Funcionalidades
